@@ -1,0 +1,126 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.body{
+    height: 100%;
+    margin: 0;
+}
+.left{
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-image: url('../assets/image 13.png');
+    background-size: cover;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    top: 0%;
+    
+}
+.left-text{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10%;
+    position: absolute;
+    bottom: 5%;
+    font-size: 55px;
+    font-weight: 750;
+    line-height: 78px;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+}
+.right{
+    float: right;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    top: 0%;
+}
+.right-content{
+    align-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    color: #7C7C7C;
+
+}
+.right-content h1{
+    font-family: 'Single Day', sans-serif;
+font-size: 60px;
+font-weight: 400;
+/*line-height: 94px;*/
+padding-bottom: 0.05%;
+letter-spacing: 0em;
+ color: #72DB73;
+
+}
+
+.right-content h2{
+    font-family: DM Sans;
+    font-size: 25px;
+    font-weight: 400;
+    /* line-height: 35px; */
+    letter-spacing: 0em;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    
+    
+}
+.form-input{
+    height: 20px;
+    background-color:  #292929;
+    border-radius: 3.82px;
+    min-width: 60%;
+    height: 50px;
+    border: none;
+    text-indent: 10px; 
+    color: white;
+   
+}
+
+.form-input::placeholder{
+    color:  #7C7C7C;
+    font-size: medium;
+}
+
+.right-content button {
+    background-color: #72DB73;
+    color: white;
+    border-radius: 28px;
+    min-width: 60%;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+}
+
+.right-content p{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+.error-message {
+    margin-top: 10px;
+  }
+  
+  .error-text {
+    color: #dc143c;
+    font-size: 18px;
+    text-align: center;
+  }
+  
