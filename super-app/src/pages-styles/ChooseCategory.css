@@ -1,0 +1,38 @@
+.body{
+    height: 100%;
+    margin: 0;
+    background-color: black;
+}
+
+.left-content{
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    top: 0%;
+    background-color: black;
+    
+}
+
+.right-content1{
+    width: 50%;
+    height: 100%;
+    float: right; 
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    top: 0%;
+    background-color: black; 
+   
+}
+
+.row{
+    display: flex;
+    padding : 10px;
+}
+
+.left-content h1{
+    color: white;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../component-styles/Category.css'
 function Category({title,image,bg}) {
   return (
     <div>

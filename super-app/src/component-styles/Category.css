@@ -1,0 +1,14 @@
+.content{
+    border-radius: 20px;
+   
+
+}
+.content h1{
+    color: white;
+    padding-left: 3%;
+    padding-top: 1%;
+}
+.content img{
+    padding-left: 3%;
+    padding-right: 3%;
+}
