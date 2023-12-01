@@ -2,6 +2,7 @@ import React from 'react'
 import '../pages-styles/SignUp.css'
 import {useFormik } from 'formik';
 import * as Yup from 'yup';
+import { useNavigate } from 'react-router-dom';
 const validationSchema = Yup.object({
   name: Yup.string().required('First Name is required'),
   user_name: Yup.string().required('User Name is required'),
@@ -9,7 +10,10 @@ const validationSchema = Yup.object({
   mobile: Yup.string().matches(/^[0-9]+$/, 'Invalid phone number').required('Mobile number is required')
 
 });
+
+
 function SignUp() {
+  const navigate = useNavigate();
  
     const formik = useFormik({
       initialValues:{
@@ -21,6 +25,7 @@ function SignUp() {
       validationSchema : validationSchema,
       onSubmit: (values) =>{
         console.log("form submitted");
+        navigate('/selectCategory');
       },
     });
 
@@ -64,7 +69,7 @@ function SignUp() {
             <label htmlFor="tnc">Share my registration data with Superapp</label>
             <br></br>
             <br></br>
-            <button>Sign Up</button>
+            <button onClick={onsubmit}>Sign Up</button>
             <br></br>
             </form>
 
