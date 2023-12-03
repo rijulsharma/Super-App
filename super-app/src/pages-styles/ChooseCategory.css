@@ -1,14 +1,20 @@
 .body{
     height: 100%;
     margin: 0;
-    background-color: black;
+    background-color: black !important;
+}
+.yo{
+    background-color: black !important;
+    height: 100%;
+    margin: 0;
+    display: flex; 
 }
 
-.left-content{
+.left-content1{
     width: 50%;
     height: 100%;
     float: left;
-    position: absolute;
+  
     bottom: 0%;
     left: 0%;
     top: 0%;
@@ -20,19 +26,74 @@
     width: 50%;
     height: 100%;
     float: right; 
-    position: absolute;
+   
     bottom: 0%;
     right: 0%;
     top: 0%;
     background-color: black; 
    
 }
+.error-text{
+    color: red;
+}
 
 .row{
     display: flex;
-    padding : 10px;
+    padding: 10px;
+    padding-right: 20px;
 }
 
-.left-content h1{
+.left-content1 h1{
     color: white;
+    font-family: 'Roboto', sans-serif;
+font-size: 50px;
+font-weight: 700;
+
+letter-spacing: 0em;
+text-align: left;
+padding-left: 10%;
+padding-right: 10%;
+
+}
+
+.header{
+    color:  #72DB73 !important;
+    font-size: 50px !important;
+    
+}
+.next-button{
+    background-color: #148A08;
+    color: white;
+    border-radius: 38.8px;
+    border: none;
+    height: 40px;
+    width: 200px;
+    font-size: large;
+
+}
+
+.choice{
+    color: white;
+    background-color: #148A08;
+    border-radius: 32px;
+    width: 190px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.choice p{
+    padding: 10px;
+}
+.choice-box{
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: black;
+}
+.cross{
+    cursor: pointer;
 }

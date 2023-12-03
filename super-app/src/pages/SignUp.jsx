@@ -31,7 +31,7 @@ function SignUp() {
 
   
   return (
-    <div>
+    <div className='signup'>
         <div className='left'>
           <p className='left-text'>Discover new things on Superapp</p>
         </div>
