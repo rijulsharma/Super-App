@@ -1,67 +1,68 @@
-
-
 .body{
-    height: 100%;
+   
     margin: 0;
     
 }
-.signup{
+
+.fullWindow{
     display: flex;
+    background-color: black;
+   
 }
 .left{
-    width: 50%;
-    height: 100%;
-    float: left;
+    
+    padding: 0;
+    width: 49%;
+    min-height: 900px;
+    height: 100vh;
     background-image: url('../assets/image 13.png');
     background-size: cover;
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    top: 0%;
-    
+    position: relative;
+    flex-grow: 1;
+
+
 }
 .left-text{
+    
     color: white;
     font-family: 'Roboto', sans-serif;
-    padding-left: 10%;
-    position: absolute;
-    bottom: 5%;
     font-size: 55px;
     font-weight: 750;
     line-height: 78px;
+    padding-left: 5%;
+    bottom: 5%;
     letter-spacing: 0.02em;
-    text-align: left;
+    text-align: left; 
+    position: absolute;
+
 
 }
 .right{
-    float: right;
-    width: 50%;
-    height: 100%;
-    background-color: black;
-    color: white;
-    position: absolute;
-    bottom: 0%;
-    right: 0%;
-    top: 0%;
-}
-.right-content {
-    align-content: center;
-    text-align: center;
-    left: 10%;
-    right: 10%;
-    color: #7C7C7C;
+   
     display: flex;
-    flex-direction: column;
-}
+    justify-content: space-around;
+    background-color: black;
+    width: 51%;
+    color: white;
+    flex-grow: 1;
 
+}
+.right-content{
+    
+    text-align: left;
+    color: #7C7C7C;
+    width:55%;
+    padding: 5%;
+    
+}
 .right-content h1{
     font-family: 'Single Day', sans-serif;
-font-size: 60px;
-font-weight: 400;
-/*line-height: 94px;*/
-padding-bottom: 0.05%;
-letter-spacing: 0em;
- color: #72DB73;
+    font-size: 60px;
+    font-weight: 400;
+    padding-bottom: 0.05%;
+    letter-spacing: 0em;
+    color: #72DB73;
+    text-align: center; 
 
 }
 
@@ -69,11 +70,10 @@ letter-spacing: 0em;
     font-family: DM Sans;
     font-size: 25px;
     font-weight: 400;
-    /* line-height: 35px; */
     letter-spacing: 0em;
     font-family: 'DM Sans', sans-serif;
     color: white;
-    
+    text-align: center; 
     
 }
 .form-input{
@@ -81,6 +81,7 @@ letter-spacing: 0em;
     background-color:  #292929;
     border-radius: 3.82px;
     min-width: 60%;
+    width: 100%;
     height: 50px;
     border: none;
     text-indent: 10px; 
@@ -98,6 +99,7 @@ letter-spacing: 0em;
     color: white;
     border-radius: 28px;
     min-width: 60%;
+    width: 100%;
     border: none;
     cursor: pointer;
     height: 50px;
@@ -121,6 +123,7 @@ letter-spacing: 0em;
   .error-text {
     color: #dc143c;
     font-size: 18px;
-    text-align: center;
+    text-align: left;
+
   }
   
