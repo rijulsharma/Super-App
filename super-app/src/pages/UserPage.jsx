@@ -7,6 +7,8 @@ import { useState,useContext,useEffect } from 'react';
 import NotesCard from '../components/NotesCard';
 import WeatherCard from '../components/WeatherCard';
 import UserCard from '../components/UserCard';
+import TimerCard from '../components/TimerCard';
+import NewsCard from '../components/NewsCard';
 function UserPage() {
   useEffect(() => {
     const fetchData = async () => {
@@ -41,10 +43,10 @@ function UserPage() {
  
             
           </div>
-        <div className='timer-card'></div>
+        <TimerCard></TimerCard>
       </div>
       <div className='right-content'>
-        <div className='news-card'></div>
+       <NewsCard></NewsCard>
       </div>
       </div>
       <button className='browse-button'>browse</button>
