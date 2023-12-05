@@ -28,6 +28,9 @@ function SignUp() {
         navigate('/selectCategory');
       },
     });
+const name = formik.values.name;
+const email = formik.values.email;
+const username = formik.values.user_name;
 
   
   return (

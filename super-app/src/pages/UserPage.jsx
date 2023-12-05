@@ -1,7 +1,26 @@
 import React from 'react'
 import '../pages-styles/UserPage.css'
 import kawaii from '../assets/kawaii.png';
+import axios  from 'axios';
+
+import { useState,useContext,useEffect } from 'react';
+import NotesCard from '../components/NotesCard';
+import WeatherCard from '../components/WeatherCard';
+import UserCard from '../components/UserCard';
 function UserPage() {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=c8a6970773284d74ac92a45aba4b2f57');
+        console.log(response.data);
+      } catch (error) {
+        console.log("Some error occurred");
+      }
+    };
+  
+    fetchData(); 
+  }, []);
+  
   return (
     <div className='userpage'>
       <div className='main-content'>
@@ -10,24 +29,14 @@ function UserPage() {
        
         <div className='left-content-top'>
           <div className='left-content-top-left'>
-          <div className='user-card'>
-          <img src={kawaii}></img>
-          <h2>Risu</h2>
-          <h2>risu.chan.kawaii@gmail.com</h2>
-          <h1>risu-chu</h1>
-        </div>
-        <div className='weather-card'>
-          <div className='weather-card-top'>
-            <p>2-20-2023</p>
-            <p>07:35 PM</p>
-          </div>
-          
-        </div>
+          <UserCard></UserCard>
+        <WeatherCard></WeatherCard>
           </div>
 
         
         
-          <input className='notes-card'></input>
+           <NotesCard></NotesCard>
+
           
  
             
@@ -45,3 +54,5 @@ function UserPage() {
 }
 
 export default UserPage
+
+
