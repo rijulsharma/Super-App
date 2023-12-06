@@ -20,17 +20,25 @@ function SignUp() {
         name: '',
         user_name: '',
         email: '',
-        mobile : ''
+        mobile : '',
+        
+
       },
       validationSchema : validationSchema,
       onSubmit: (values) =>{
+        if (!document.getElementById('tnc').checked) {
+          // Checkbox not checked, display error
+          alert('Please accept the Terms and Conditions.');
+          return;
+        }
         console.log("form submitted");
+        localStorage.setItem('name', values.name);
+        localStorage.setItem('username', values.user_name);
+        localStorage.setItem('email', values.email);
         navigate('/selectCategory');
       },
     });
-const name = formik.values.name;
-const email = formik.values.email;
-const username = formik.values.user_name;
+
 
   
   return (
@@ -45,30 +53,30 @@ const username = formik.values.user_name;
             <br></br>
             <form onSubmit={formik.handleSubmit}>
            
-            <input className = 'form-input' placeholder='Name' id='name' type='text' onChange={formik.handleChange}
+            <input className={`form-input ${formik.touched.name && formik.errors.name ? 'error' : ''}`} placeholder='Name' id='name' type='text' onChange={formik.handleChange}
           onBlur={formik.handleBlur}  value={formik.values.name} ></input> {formik.touched.name && formik.errors.name ? (
             <div className="error-text">{formik.errors.name}</div>
           ) : null}<br></br><br></br>
           
-            <input className = 'form-input' placeholder='User Name' id='user_name' type='text' onChange={formik.handleChange}
+            <input className = {`form-input ${formik.touched.user_name && formik.errors.user_name ? 'error' : ''}`} placeholder='User Name' id='user_name' type='text' onChange={formik.handleChange}
           onBlur={formik.handleBlur} value={formik.values.user_name}> 
           </input>  {formik.touched.user_name && formik.errors.user_name ? (
             <div className="error-text">{formik.errors.user_name}</div>
           ) : null}<br></br><br></br>
 
-            <input className = 'form-input' placeholder='Email' id='email' type='text' onChange={formik.handleChange}
+            <input className = {`form-input ${formik.touched.email && formik.errors.email ? 'error' : ''}`} placeholder='Email' id='email' type='text' onChange={formik.handleChange}
           onBlur={formik.handleBlur} value={formik.values.email}> 
        </input> {formik.touched.email && formik.errors.email ? (
             <div className="error-text">{formik.errors.email}</div>
           ) : null}<br></br><br></br>
 
-            <input className = 'form-input' placeholder='Mobile' id='mobile' type='text' onChange={formik.handleChange}
+            <input className = {`form-input ${formik.touched.mobile && formik.errors.mobile ? 'error' : ''}`} placeholder='Mobile' id='mobile' type='text' onChange={formik.handleChange}
           onBlur={formik.handleBlur} value={formik.values.mobile}></input> {formik.touched.mobile && formik.errors.mobile ? (
             <div className="error-text">{formik.errors.mobile}</div>
           ) : null} <br></br><br></br>
 
           
-            <input type="checkbox" id="tnc" name="TnC"></input>
+            <input type="checkbox" id="tnc" name="TnC" ></input>  
             <label htmlFor="tnc">Share my registration data with Superapp</label>
             <br></br>
             <br></br>
@@ -76,8 +84,8 @@ const username = formik.values.user_name;
             <br></br>
             </form>
 
-            <p>By clicking on Sign up. you agree to Superapp <span style={{color: '#72DB73'}}>Terms and Conditions of Use</span></p>
-            <p>To learn more about how Superapp collects, uses, shares and protects your personal data please head Superapp <span style={{color: '#72DB73'}}>Privacy Policy</span></p>
+            <p>By clicking on Sign up. you agree to Superapp <span style={{color: '#72DB73', cursor: "pointer"}}>Terms and Conditions of Use</span></p>
+            <p>To learn more about how Superapp collects, uses, shares and protects your personal data please head Superapp <span style={{color: '#72DB73', cursor: "pointer"}}>Privacy Policy</span></p>
             </div>
         </div>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../component-styles/Cards.css'
+import kawaii from '../assets/kawaii.png'
 function UserCard() {
   return (
     <div className='user-card'>

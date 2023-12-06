@@ -51,7 +51,7 @@
     
     text-align: left;
     color: #7C7C7C;
-    width:55%;
+    width: 55%;
     padding: 5%;
     
 }
@@ -125,5 +125,8 @@
     font-size: 18px;
     text-align: left;
 
+  }
+  .error {
+    border: 1px solid #dc143c;
   }
   
